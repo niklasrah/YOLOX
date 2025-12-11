@@ -57,6 +57,8 @@ class EarlyStopping:
                 improvement = 0  # avoid division by zero
             else:
                 improvement = (value - self.best) / abs(self.best)
+        else:
+            raise ValueError(f"Unknown mode: {self.mode}, supported modes are 'max', 'min', 'percentage'.")
 
         # Check if improvement is sufficient
         if improvement > self.min_delta:
