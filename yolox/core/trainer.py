@@ -76,6 +76,7 @@ class Trainer:
         # before_train methods.
         self.exp = exp
         self.args = args
+        self.early_stopper = None
 
         # training related attr
         self.max_epoch = exp.max_epoch
